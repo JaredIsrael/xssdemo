@@ -4,4 +4,15 @@ const cors = require('cors')
 const morgan = require('morgan')
 
 const app = express()
+app.use(morgan('combined'))
+app.use(bodyParser.json())
+// CORS can be a security vulnerability, look into if this should be used
+app.use(cors())
 
+app.get('/status', (req, res) => {
+    res.send({
+        message: 'Hello!'
+    })
+});
+
+app.listen(process.env.PORT || 8081)
