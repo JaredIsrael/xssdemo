@@ -1,2 +1,2 @@
 # xssdemo
-Vue.js website to demonstrate cross site scripting 
+Vue.js/Express website to demonstrate cross site scripting 
