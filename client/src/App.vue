@@ -1,16 +1,17 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome"/>
+   <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
+   <h1>Give me your personal data I promise I will store it safely</h1>
+  <Form type="name"/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Form from './components/Form.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    Form
+}
 }
 </script>
 
