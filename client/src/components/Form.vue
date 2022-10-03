@@ -1,17 +1,34 @@
 <template>
     <div class="form">
-      <p>Enter {{ type }}</p>
-      <input class="text">
-      <button>Submit</button>
+      <input class="text" v-model="input">
+      <button @click="submitForm">Submit</button>
+      <div v-show="shouldRender">What you submitted, rendered as trusted HTML in order to bypass Vue's remote code execution security measures put in place to avoid cross site scripting:
+        <div v-html="submittedText"></div>
+      </div>
     </div>
   </template>
   
   <script>
+  import submit from '@/services/submit';
   export default {
     name: 'FormType',
     props: {
       type: String
     },
+    data () {
+      return {
+        input:"",
+        submittedText:"",
+        shouldRender:false
+      }
+    },
+    methods: {
+      submitForm() {
+        submit.submitForm(this.input)
+        this.submittedText=this.input;
+        this.shouldRender=true;
+      }
+    }
   }
   </script>
   

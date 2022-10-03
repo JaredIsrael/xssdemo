@@ -1,7 +1,7 @@
-import api from "api";
+import api from "./api";
 
 export default {
     submitForm(data) {
-        return api().post('submit', data)
+        return api().post('submit', {data:data})
     }
 }

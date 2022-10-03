@@ -1,0 +1,5 @@
+<img 
+  src="https://upload.wikimedia.org/wikipedia/commons/5/57/Brutus_Buckeye_in_2017.jpg" 
+  style="display:none" 
+  onload="alert('hi :3')"
+>
